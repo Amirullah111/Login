@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* Background image with gradient overlay */
+            background: 
+                linear-gradient(rgba(246, 211, 101, 0.7), rgba(253, 160, 133, 0.7)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 2rem 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #f76d6d;
+        }
+
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin: 6px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .gender-group {
+            margin-bottom: 18px;
+        }
+
+        .gender-group label {
+            margin-right: 15px;
+            font-weight: 400;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #f76d6d 0%, #fda085 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #f55353 0%, #fda085 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form>
+            <!-- Username Input Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <!-- Email Input Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <!-- Age Input Field -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <!-- Phone Number Input Field -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="e.g. 0712345678" pattern="[0-9]{10,15}" required>
+
+            <!-- Password Input Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <!-- Gender Input Field -->
+            <div class="gender-group">
+                <label>Gender:</label>
+                <input type="radio" name="gender" id="male" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
